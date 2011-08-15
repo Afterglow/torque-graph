@@ -1,16 +1,49 @@
 <script type="text/javascript" charset="utf-8">
   $(function() {
-    new Highcharts.Chart({
+    new Highcharts.StockChart({
       chart: {
         renderTo: "chart"
       },
+      rangeSelector: {
+        inputEnabled: false,
+        selected: 2,
+        buttons: [{
+          type: 'minute',
+          count: 5,
+          text: '5m'
+          }, {
+          type: 'minute',
+          count: 15,
+          text: '15m'
+          }, {
+          type: 'all',
+          text: 'All'
+        }]
+      },
       title: {
-        text: "Sensor K4"
-      }
+        text: "Sensor <%= params[:sensor] =%>"
+      },
+      xAxis: {
+        maxZoom: <%= 5.minutes * 1000 =%>
+      },
+      yAxis: {
+        text: "Unit"
+      },
+      tooltip: {
+        formatter: function() {
+          return Highcharts.dateFormat("%B %e %Y", this.x) + ': '+
+            Highcharts.numberFormat(this.y, 2);
+        }
+      },
+      series: [{
+        pointInterval: <%= 1.second * 1000 =%>,
+        pointStart: <%= params[:session] =%>,
+        data: <%= @data.inspect =%>,
+      }],
     });
   });
 </script>
 
-<h1>Sessions#Sensor</h1>
+<h1>Session sensor log</h1>
 <div id="chart" style="width:560px; height:300px;">
 </div>

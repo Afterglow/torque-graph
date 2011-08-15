@@ -20,6 +20,7 @@ class TorqueController < ApplicationController
           reading = Reading.new()
           reading.did = device.deviceid
           reading.sid = session
+          reading.t = time
           reading.s = pid
           reading.v = value
           if not reading.save()

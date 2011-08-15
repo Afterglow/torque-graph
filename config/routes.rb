@@ -9,9 +9,10 @@ Mycar::Application.routes.draw do
 
   resources :devices
 
-  resources :sessions
-
-  match "torque" => "torque#index"    
+  match "torque" => "torque#index"
+  match "/sessions/:device" => "sessions#deviceindex"
+  match "/sessions/:device/:session" => "sessions#sessionindex"
+  match "/sessions/:device/:session/:sensor" => "sessions#sensor"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -3,6 +3,7 @@ class Reading
 
   key :did, ObjectId, :required => true
   key :sid, String, :required => true
+  key :t, Integer, :required => true
   key :s, ObjectId, :required => true
   key :v, Float, :required => true, :numericality => true
 
