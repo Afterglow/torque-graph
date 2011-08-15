@@ -1,0 +1,29 @@
+<h1>Listing readings</h1>
+
+<table>
+  <tr>
+    <th>Deviceid</th>
+    <th>Session</th>
+    <th>Sensor</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @readings.each do |reading| %>
+  <tr>
+    <td><%= reading.did %></td>
+    <td><%= reading.sid %></td>
+    <td><%= reading.s %></td>
+    <td><%= reading.v %></td>
+    <td><%= link_to 'Show', reading %></td>
+    <td><%= link_to 'Edit', edit_reading_path(reading) %></td>
+    <td><%= link_to 'Destroy', reading, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reading', new_reading_path %>

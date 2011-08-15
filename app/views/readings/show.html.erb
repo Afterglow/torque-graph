@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Deviceid:</b>
+  <%= @reading.did %>
+</p>
+
+<p>
+  <b>Session:</b>
+  <%= @reading.sid %>
+</p>
+
+<p>
+  <b>Sensor:</b>
+  <%= @reading.s %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @reading.v %>
+</p>
+
+
+<%= link_to 'Edit', edit_reading_path(@reading) %> |
+<%= link_to 'Back', readings_path %>

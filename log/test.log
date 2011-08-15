@@ -1,0 +1,61 @@
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB mycar_test['$cmd'].find({"count"=>"devices", "query"=>{}, "fields"=>nil})
+  Processing by DevicesController#create as HTML
+  Parameters: {"device"=>{"deviceid"=>"testdevice", "name"=>"testname", "description"=>"testdevice"}}
+MONGODB mycar_test['devices'].update({:_id=>BSON::ObjectId('4e49416d52e4ec14bf000001')}, {"_id"=>BSON::ObjectId('4e49416d52e4ec14bf000001'), "deviceid"=>"testdevice", "name"=>"testname", "description"=>"testdevice"})
+Redirected to http://test.host/devices/4e49416d52e4ec14bf000001
+Completed 302 Found in 22ms
+MONGODB mycar_test['$cmd'].find({"count"=>"devices", "query"=>{}, "fields"=>nil})
+MONGODB mycar_test['$cmd'].find({"count"=>"devices", "query"=>{}, "fields"=>nil})
+  Processing by DevicesController#destroy as HTML
+  Parameters: {"id"=>"description=testdevice&deviceid=testdevice&name=testname"}
+MONGODB mycar_test['devices'].find({:_id=>"description=testdevice&deviceid=testdevice&name=testname"})
+Completed 500 Internal Server Error in 1ms
+  Processing by DevicesController#edit as HTML
+  Parameters: {"id"=>"description=testdevice&deviceid=testdevice&name=testname"}
+MONGODB mycar_test['devices'].find({:_id=>"description=testdevice&deviceid=testdevice&name=testname"})
+Rendered devices/_form.html.erb (9.9ms)
+Completed 500 Internal Server Error in 15ms
+  Processing by DevicesController#index as HTML
+MONGODB mycar_test['devices'].find({})
+Completed 200 OK in 4ms (Views: 2.8ms)
+  Processing by DevicesController#new as HTML
+Rendered devices/_form.html.erb (29.8ms)
+Completed 200 OK in 32ms (Views: 31.5ms)
+  Processing by DevicesController#show as HTML
+  Parameters: {"id"=>"description=testdevice&deviceid=testdevice&name=testname"}
+MONGODB mycar_test['devices'].find({:_id=>"description=testdevice&deviceid=testdevice&name=testname"})
+Completed 500 Internal Server Error in 2ms
+  Processing by DevicesController#update as HTML
+  Parameters: {"device"=>{"deviceid"=>"testdevice", "name"=>"testname", "description"=>"testdevice"}, "id"=>"description=testdevice&deviceid=testdevice&name=testname"}
+MONGODB mycar_test['devices'].find({:_id=>"description=testdevice&deviceid=testdevice&name=testname"})
+Completed 500 Internal Server Error in 1ms

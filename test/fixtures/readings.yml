@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  did: 
+  sid: MyString
+  s: 
+  v: 9.99
+
+two:
+  did: 
+  sid: MyString
+  s: 
+  v: 9.99

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  description: MyString
+  min: 9.99
+  max: 9.99
+  unit: MyString
+
+two:
+  code: MyString
+  description: MyString
+  min: 9.99
+  max: 9.99
+  unit: MyString
