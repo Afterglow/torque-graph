@@ -8,26 +8,28 @@
         inputEnabled: false,
         selected: 2,
         buttons: [{
-          type: 'minute',
-          count: 5,
-          text: '5m'
+            type: 'minute',
+            count: 5,
+            text: '5m'
           }, {
-          type: 'minute',
-          count: 15,
-          text: '15m'
+            type: 'minute',
+            count: 15,
+            text: '15m'
           }, {
-          type: 'all',
-          text: 'All'
+            type: 'all',
+            text: 'All'
         }]
       },
       title: {
-        text: "Sensor <%= params[:sensor] =%>"
+        text: "<%= @sensor.description =%>"
       },
       xAxis: {
         maxZoom: <%= 5.minutes * 1000 =%>
       },
       yAxis: {
-        text: "Unit"
+        title: {
+          text: "<%= @sensor.description =%> (<%= @sensor.unit =%>)"
+        }
       },
       tooltip: {
         formatter: function() {
@@ -44,6 +46,6 @@
   });
 </script>
 
-<h1>Session sensor log</h1>
+<h1>Session sensor log for <%= @sensor.description =%></h1>
 <div id="chart" style="width:560px; height:300px;">
 </div>
