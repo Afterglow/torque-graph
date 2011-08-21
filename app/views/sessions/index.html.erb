@@ -32,7 +32,14 @@
 <% end %>
 </script>
 <h1>Sessions#index</h1>
-<% @sensors.each do |sensor| %>
-<div id="<%= sensor.code =%>" style="width:300px; height:125px;">
-<% end %>
+<div id="makeMeScrollable">
+	<div class="scrollingHotSpotLeft"></div>
+	<div class="scrollingHotSpotRight"></div>
+	<div class="scrollWrapper">
+		<div class="scrollableArea">
+		<% @sensors.each do |sensor| %>
+			<div id="<%= sensor.code =%>" style="width:300px; height:125px;"></div>
+		<% end %>
+		</div>
+	</div>
 </div>
