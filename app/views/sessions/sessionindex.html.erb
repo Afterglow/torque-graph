@@ -1,12 +1,23 @@
+<script type="text/javascript">
+// Initialize the plugin with no custom options
+$(window).load(function() {
+	$("div#makeMeScrollable").smoothDivScroll({
+		autoScroll: "onstart",
+		autoScrollStep: 1, 
+		autoScrollInterval: 15,
+		visibleHotSpots: "always"
+	});
+});
+</script>
 <script type="text/javascript" charset="utf-8">
-  jQuery(function() {
+jQuery(function() {
 <% @sensors.each do |code, sensor| %>
     var chart<%= code =%> = new Highcharts.Chart({
       chart: {
         renderTo: '<%= code =%>'
       },
       title: {
-	text: '<%= sensor.description =%>'
+        text: '<%= sensor.description =%>'
       },
       xAxis: {
         type: 'datetime'
@@ -34,11 +45,41 @@
     <% end %>
   });
 </script>
+<style type="text/css">
+#makeMeScrollable
+{
+	width:90%;
+	height:300px;
+	position: relative;
+}
+#makeMeScrollable div.scrollableArea img
+{
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+#makeMeScrollable div.scrollableArea div
+{
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0;
+}
+</style>
 
 <h1>Sessions#index</h1>
-<% @sensors.each do |code, sensor| %>
-<div>
-<div id="<%= code =%>" style="width:350px; height:250px;"></div>
-<a href='<%= code =%>'>View this chart</a>
+<div id="makeMeScrollable">
+        <div class="scrollingHotSpotLeft"></div>
+        <div class="scrollingHotSpotRight"></div>
+        <div class="scrollWrapper">
+                <div class="scrollableArea">
+		<% @sensors.each do |code, sensor| %>
+			<div>
+				<div id="<%= code =%>" style="width:350px; height:250px;"></div>
+				<center><a href='<%= code =%>'>View</a></center>
+			</div>
+		<% end %>
+                </div>
+        </div>
 </div>
-<% end %>
