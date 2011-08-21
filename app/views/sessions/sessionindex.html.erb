@@ -90,7 +90,7 @@ jQuery(function() {
 		<h2>Sensors</h2>
 		<ul>
 			<% @sensors.each do |code, sensor| %>
-				<li><a href='<%= code =%>'>sensor.description</a></li>
+				<li><a href='<%= code =%>'><%= sensor.description =%></a></li>
 			<% end %>
 		</ul>
 	</div>
