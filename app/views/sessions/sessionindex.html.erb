@@ -86,4 +86,15 @@ jQuery(function() {
         	</div>
 		</div>
 	</div>
+	<div class="grid_4">
+		<h2>Sensors</h2>
+		<ul>
+			<% @sensors.each do |code, sensor| %>
+				<li><a href='<%= code =%>'>sensor.description</a></li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="grid_8">
+		&nbsp;
+	</div>
 </div>
